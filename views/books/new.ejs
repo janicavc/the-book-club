@@ -4,13 +4,13 @@
 <form action="/books" method="POST">
     <label>Title:
         <input type="text" name="title">
-    </label><br>
+    </label><br><br>
     <label>Author:
         <input type="text" name="author">
-    </label><br>
+    </label><br><br>
     <label>Publish Year:
         <input type="number" name="publishYear">
-    </label><br>
+    </label><br><br>
     <label>Genre
         <select name="genre">
             <option value="Fiction">Fiction</option>
@@ -32,10 +32,10 @@
             <option value="Poetry">Poetry</option>
             <option value="Other">Other</option>
         </select>
-    </label><br>
+    </label><br><br>
     <label>Description
         <textarea name="description" cols="30" rows="8"></textarea>
-    </label><br>
+    </label><br><br>
     <button type="submit">Add Book</button>
 </form>
 <p><%= errorMsg %></p>

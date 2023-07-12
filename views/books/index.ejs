@@ -1,0 +1,27 @@
+<%- include('../partials/header') %>
+
+<h2>Book Recommendations</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Publish Year</th>
+            <th>Genre</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% books.forEach(function(b) {%>
+            <tr>
+                <td><%= b.title %></td>
+                <td><%= b.author %></td>
+                <td><%= b.publishYear %></td>
+                <td><%= b.genre %></td>
+                <td><%= b.description %></td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
+
+<%- include('../partials/footer') %>
