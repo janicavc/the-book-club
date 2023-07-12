@@ -7,6 +7,7 @@ module.exports = {
 
 async function create(req, res) {
     const book = await Book.findById(req.params.id);
+    
     book.ratings.push(req.body);
     try {
         await book.save();
