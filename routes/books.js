@@ -6,9 +6,10 @@ const booksCtrl = require('../controllers/books');
 router.get('/', booksCtrl.index);
 // GET /books/new
 router.get('/new', booksCtrl.new);
-// GEt /books/:id
+// GET /books/:id
 router.get('/:id', booksCtrl.show);
 // POST /books
 router.post('/', booksCtrl.create);
+
 
 module.exports = router;

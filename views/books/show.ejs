@@ -50,6 +50,11 @@
                 <tr>
                     <td><%= r.createdAt.toLocaleDateString() %></td>
                     <td><%= r.rating %></td>
+                    <td>
+                        <form action="/ratings/<%= r._id %>?_method=DELETE" id="delete-form" method="POST">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
                 </tr>
             <% }); %>
             <tr>
