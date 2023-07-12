@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var methodOverride = require('method-override');
 var session = require('express-session');
 var passport = require('passport');
 // require dotenv
@@ -29,6 +30,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Mount middleware
+
+app.use(methodOverride('_method'));
+
 app.use(session({
   secret: process.env.SECRET,
   resave: false,

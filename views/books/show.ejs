@@ -44,12 +44,18 @@
                 </tr>
             </thead>
             <tbody>
+            <% let total = 0 %>
             <% book.ratings.forEach(function(r) { %>
+                <% total += r.rating %>
                 <tr>
                     <td><%= r.createdAt.toLocaleDateString() %></td>
                     <td><%= r.rating %></td>
                 </tr>
             <% }); %>
+            <tr>
+                <td colspan="2"></td>
+                <td><strong><%= (total / book.ratings.length).toFixed(1) %></strong></td>
+            </tr>
             </tbody>
         </table>
     <% } else { %>
