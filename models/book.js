@@ -8,7 +8,14 @@ const ratingSchema = new Schema ({
         min: 1,
         max: 10,
         default: 10
-    }
+    },
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    },
+    userName: String,
+    userAvatar: String
 }, {
     timestamps: true
 });

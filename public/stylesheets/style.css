@@ -68,3 +68,14 @@ nav > a.active {
 #delete-form button {
   color: lightcoral;
 }
+
+#rating-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#rating-user img {
+  border-radius: 50%;
+  height: 40px;
+}

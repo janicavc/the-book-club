@@ -39,6 +39,7 @@
         <table>
             <thead>
                 <tr>
+                    <th>User</th>
                     <th>Date</th>
                     <th>Rating</th>
                 </tr>
@@ -48,6 +49,7 @@
             <% book.ratings.forEach(function(r) { %>
                 <% total += r.rating %>
                 <tr>
+                    <td id="rating-user"><img alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer" ><%= r.userName %></td>
                     <td><%= r.createdAt.toLocaleDateString() %></td>
                     <td><%= r.rating %></td>
                     <td>
@@ -55,7 +57,7 @@
                             <button type="submit">Delete</button>
                         </form>
                     </td>
-                </tr>
+                </tr><br><br>
             <% }); %>
             <tr>
                 <td colspan="2"></td>
