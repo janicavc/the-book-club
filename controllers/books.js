@@ -1,12 +1,15 @@
+const Book = require('../models/book');
+
+
 module.exports = {
+    index,
     new: newBook,
     create,
-    index
 };
 
 async function index(req, res) {
-    const book = await Book.find({});
-    res.render('books/index', { title: 'All Books', book});
+    const books = await Book.find({});
+    res.render('books/index', { title: 'All Books', books });
 }
 
 function newBook(req, res) {
