@@ -35,4 +35,25 @@
         <input type="submit" value="Rate the book">
     </form>
 
+    <% if (book.ratings.length) { %>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+            <% book.ratings.forEach(function(r) { %>
+                <tr>
+                    <td><%= r.createdAt.toLocaleDateString() %></td>
+                    <td><%= r.rating %></td>
+                </tr>
+            <% }); %>
+            </tbody>
+        </table>
+    <% } else { %>
+        <h5>No Ratings Yet</h5>
+    <% } %>
+
 <%- include('../partials/footer') %>

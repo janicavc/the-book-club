@@ -18,7 +18,7 @@ const bookSchema = new Schema({
     publishYear: Number,
     genre: String,
     description: String,
-    rating: [ratingSchema]
+    ratings: [ratingSchema]
 }, {
     timestamps: true
 });
