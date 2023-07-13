@@ -6,7 +6,8 @@ module.exports = {
     new: newBook,
     show,
     create,
-    update: updateBook
+    update: updateBook,
+    edit
 };
 
 async function index(req, res) {
@@ -36,6 +37,21 @@ async function create(req, res) {
 }
 
 async function updateBook(req, res) {
-    
+    try {
+        await Book.updateOne({_: req.params.id}, req.body);
+        res.redirect(`/books/${req.params.id}`);
+    } catch (err) {
+        console.log(err);
+        res.redirect('books/new')
+    }
 }
 
+async function edit(req, res) {
+    try {
+        const book = await Book.findById(req.params.id)
+        res.render('books/edit')
+    } catch (err) {
+        console.log(err);
+        res.redirect('/books')
+    }
+}

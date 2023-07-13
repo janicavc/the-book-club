@@ -10,6 +10,8 @@ router.get('/', ensureLoggedIn, booksCtrl.index);
 router.get('/new', ensureLoggedIn, booksCtrl.new);
 // GET /books/:id
 router.get('/:id', ensureLoggedIn, booksCtrl.show);
+// GET /books/:id/edit
+router.get('/:id/edit', ensureLoggedIn, booksCtrl.edit);
 // POST /books
 router.post('/', ensureLoggedIn, booksCtrl.create);
 // PUT /books/:id

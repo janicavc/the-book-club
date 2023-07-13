@@ -16,10 +16,8 @@
     <div>Description: </div>
     <div><%= book.description %></div>
 </section>
-    <!-- update rec -->
-    <form action="/books/<%= book._id %>?_method=PUT" id="update-form" method="PUT">
-        <button type="submit">Update</button>
-    </form>
+   <!-- edit -->
+   <a href="/books/<%= book._id %>/edit">Edit Book Rec</a>
     <!-- ratings -->
     <br><br><h2>Ratings</h2>
     <form id="add-rating-form" method="POST" action="/books/<%= book._id %>/ratings">
