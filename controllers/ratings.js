@@ -22,7 +22,9 @@ async function create(req, res) {
 }
 
 async function deleteRating(req, res) {
-    const book = await Book.findOne({ 'ratings._id': req.params.id });
+    const book = await Book.findOne({ 'ratings._id': req.params.id, 'ratings.user': req.user._id });
+    
+    if (!book) return res.redirect('/books');
 
     book.ratings.remove(req.params.id);
     await book.save();
