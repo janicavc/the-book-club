@@ -8,4 +8,6 @@ router.post('/books/:id/ratings', ensureLoggedIn, ratingsCtrl.create);
 // DELETE /:id
 router.delete('/ratings/:id', ensureLoggedIn, ratingsCtrl.delete);
 
+
+
 module.exports = router;

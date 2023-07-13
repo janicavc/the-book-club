@@ -6,7 +6,7 @@ module.exports = {
     new: newBook,
     show,
     create,
-    update: updateBook,
+    update,
     edit
 };
 
@@ -36,22 +36,13 @@ async function create(req, res) {
     }
 }
 
-async function updateBook(req, res) {
-    try {
-        await Book.updateOne({_: req.params.id}, req.body);
-        res.redirect(`/books/${req.params.id}`);
-    } catch (err) {
-        console.log(err);
-        res.redirect('books/new')
-    }
+async function update(req, res) {
+    Book.update(res.params.id, req.body);
+    res.redirect(`books/${req.params.id}`);
 }
 
+
 async function edit(req, res) {
-    try {
-        const book = await Book.findById(req.params.id)
-        res.render('books/edit')
-    } catch (err) {
-        console.log(err);
-        res.redirect('/books')
-    }
+    const book = await Book.findById(req.params.id);
+    res.render('books/edit', { title: 'Edit Book', book });
 }
