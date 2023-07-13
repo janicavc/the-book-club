@@ -3,7 +3,7 @@ const Book = require('../models/book');
 
 module.exports = {
     create,
-    delete: deleteBook
+    delete: deleteRating
 };
 
 async function create(req, res) {
@@ -21,7 +21,7 @@ async function create(req, res) {
     res.redirect(`/books/${book._id}`);
 }
 
-async function deleteBook(req, res) {
+async function deleteRating(req, res) {
     const book = await Book.findOne({ 'ratings._id': req.params.id });
 
     book.ratings.remove(req.params.id);

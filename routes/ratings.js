@@ -5,6 +5,6 @@ const ratingsCtrl = require('../controllers/ratings');
 // POST /books/:id/ratings
 router.post('/books/:id/ratings', ratingsCtrl.create);
 // DELETE /:id
-router.delete('/:id', ratingsCtrl.delete);
+router.delete('/ratings/:id', ratingsCtrl.delete);
 
 module.exports = router;
