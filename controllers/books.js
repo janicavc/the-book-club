@@ -1,3 +1,4 @@
+const book = require('../models/book');
 const Book = require('../models/book');
 
 
@@ -37,8 +38,19 @@ async function create(req, res) {
 }
 
 async function update(req, res) {
-    Book.update(res.params.id, req.body);
-    res.redirect(`books/${req.params.id}`);
+    try {
+       await Book.findByIdAndUpdate(req.params.id, {
+        title: req.body.title,
+        author: req.body.author,
+        publishYear: req.body.publishYear,
+        genre: req.body.genre,
+        description: req.body.description
+       });
+        res.redirect('/books/');
+    } catch(err) {
+        console.log(err);
+        res.render('/books', { errorMsg: err.message});
+    }
 }
 
 
