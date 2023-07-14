@@ -8,7 +8,8 @@ module.exports = {
     show,
     create,
     update,
-    edit
+    edit,
+    delete: deleteBook
 };
 
 async function index(req, res) {
@@ -56,4 +57,9 @@ async function update(req, res) {
 async function edit(req, res) {
     const book = await Book.findById(req.params.id);
     res.render('books/edit', { title: 'Edit Book', book });
+}
+
+async function deleteBook(req, res) {
+    Book.deleteOne(req.params.id);
+    res.redirect('/books');
 }
