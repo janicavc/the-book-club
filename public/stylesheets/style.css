@@ -1,6 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
 }
 
 a {
@@ -10,7 +11,7 @@ a {
 /* nav bar */
 body > nav {
   grid-area: nav;
-  background-color: lightgrey;
+  background-color: lavender;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -79,3 +80,4 @@ nav > a.active {
   border-radius: 50%;
   height: 40px;
 }
+

@@ -31,7 +31,7 @@ async function create(req, res) {
 
     try {
         await Book.create(req.body);
-        res.redirect('/books/new');
+        res.redirect('/books');
     } catch (err) {
         console.log(err);
         res.render('books/new', { errorMsg: err.message });
@@ -60,6 +60,10 @@ async function edit(req, res) {
 }
 
 async function deleteBook(req, res) {
-    Book.deleteOne(req.params.id);
-    res.redirect('/books');
-}
+    try {
+        await Book.deleteOne({ _id: req.params.id });
+        res.redirect('/books');
+    } catch (err) {
+        console.log(err);
+    }
+ }

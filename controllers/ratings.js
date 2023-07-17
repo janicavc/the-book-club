@@ -30,3 +30,4 @@ async function deleteRating(req, res) {
     await book.save();
     res.redirect(`/books/${book._id}`);
 }
+
