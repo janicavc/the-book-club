@@ -62,6 +62,9 @@ async function edit(req, res) {
 async function deleteBook(req, res) {
     try {
         await Book.deleteOne({ _id: req.params.id });
+        if (!book.user.equals(req.user._id)) {
+            res.redirect('/books')
+        }
         res.redirect('/books');
     } catch (err) {
         console.log(err);
