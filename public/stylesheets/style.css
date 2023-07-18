@@ -1,6 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  justify-content: center;
   text-align: center;
 }
 
@@ -80,4 +81,3 @@ nav > a.active {
   border-radius: 50%;
   height: 40px;
 }
-
