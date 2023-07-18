@@ -1,8 +1,5 @@
 # The Book Club
-Come join the Book Club! A space to 
-## The Book Club Previews
-![Login](Screenshot 2023-07-18 at 8.58.42 AM)
-![Books](Screenshot 2023-07-18 at 8.58.25 AM)
+Come join the Book Club! A space to share your favorite books of all genres and to find new reads!
 ## Technologies Used
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
