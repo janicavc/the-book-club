@@ -2,17 +2,17 @@
 
 <h2>New Book Recommendations</h2>
 <form action="/books" method="POST">
-    <label>Title:
-        <input type="text" name="title">
+    <label class="form-label">Title:
+        <input class="form-control" type="text" name="title">
     </label><br><br>
-    <label>Author:
-        <input type="text" name="author">
+    <label class="form-label">Author:
+        <input class="form-control" type="text" name="author">
     </label><br><br>
-    <label>Publish Year:
-        <input type="number" name="publishYear">
+    <label class="form-label">Publish Year:
+        <input class="form-control" type="number" name="publishYear">
     </label><br><br>
-    <label>Genre
-        <select name="genre">
+    <label class="form-label">Genre
+        <select class="form-select" name="genre">
             <option value="Fiction">Fiction</option>
             <option value="Non-Fiction">Non-Fiction</option>
             <option value="Fantasy">Fantasy</option>
@@ -33,10 +33,10 @@
             <option value="Other">Other</option>
         </select>
     </label><br><br>
-    <label>Description
-        <textarea name="description" cols="30" rows="8"></textarea>
+    <label class="form-label">Description
+        <textarea class="form-control" name="description" cols="30" rows="8"></textarea>
     </label><br><br>
-    <button type="submit">Add Book</button>
+    <button type="button" class="btn btn-outline-success">Add Book</button>
 </form>
 <p><%= errorMsg %></p>
 

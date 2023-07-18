@@ -1,23 +1,25 @@
 <%- include('../partials/header') %>
 
-<section id="show-page">
-    <div>Title: </div>
-    <div><%= book.title %></div>
-    <br>
-    <div> Author: </div>
-    <div><%= book.author %></div>
-    <br>
-    <div> Publish Year: </div>
-    <div><%= book.publishYear %></div>
-    <br>
-    <div> Genre: </div>
-    <div><%= book.genre %></div>
-    <br>
-    <div> Description: </div>
-    <div><%= book.description %></div>
-</section>
+    <div class="table-striped">
+        <table class="table justify-content-center">
+            <div>Title: </div>
+            <div><%= book.title %></div>
+            <br>
+            <div> Author: </div>
+            <div><%= book.author %></div>
+            <br>
+            <div> Publish Year: </div>
+            <div><%= book.publishYear %></div>
+            <br>
+            <div> Genre: </div>
+            <div><%= book.genre %></div>
+            <br>
+            <div> Description: </div>
+            <div><%= book.description %></div>
+        </table>
+    </div>
    <!-- edit -->
-   <a href="/books/<%= book._id %>/edit">Edit Book Rec</a>
+   <a class="btn btn-outline-info" href="/books/<%= book._id %>/edit">Edit Book Rec</a>
     <!-- ratings -->
     <br><br><h2>Ratings</h2>
     <form id="add-rating-form" method="POST" action="/books/<%= book._id %>/ratings">
@@ -34,11 +36,11 @@
             <option value="9">9</option>
             <option value="10" selected>10</option>
         </select>
-        <input type="submit" value="Rate the book">
+        <input class="btn btn-outline-info" type="submit" value="Rate the book">
     </form>
 
     <% if (book.ratings.length) { %>
-        <table>
+        <table class="table">
             <thead>
                 <tr>
                     <th>User</th>
@@ -56,7 +58,7 @@
                     <td><%= r.rating %></td>
                     <td>
                         <form action="/ratings/<%= r._id %>?_method=DELETE" id="delete-form" method="POST">
-                            <button type="submit">Delete</button>
+                            <button type="button" class="btn btn-outline-danger">Delete</button>
                         </form>
                     </td>
                 </tr><br><br>

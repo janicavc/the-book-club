@@ -3,17 +3,17 @@
 <h2>Edit Book Rating</h2>
 
 <form action="/books/<%= book._id %>?_method=PUT" method="POST">
-    <label>Title:
-        <input type="text" name="title" value="<%= book.title %>">
+    <label class="form-label">Title:
+        <input class="form-control" type="text" name="title" value="<%= book.title %>">
     </label><br><br>
-    <label>Author:
-        <input type="text" name="author" value="<%= book.author %>">
+    <label class="form-label">Author:
+        <input class="form-control" type="text" name="author" value="<%= book.author %>">
     </label><br><br>
-    <label>Publish Year:
-        <input type="number" name="publishYear" value="<%= book.publishYear %>">
+    <label class="form-label">Publish Year:
+        <input class="form-control" type="number" name="publishYear" value="<%= book.publishYear %>">
     </label><br><br>
-    <label>Genre
-        <select name="genre">
+    <label class="form-label">Genre
+        <select class="form-select" name="genre">
             <option value="Fiction">Fiction</option>
             <option value="Non-Fiction">Non-Fiction</option>
             <option value="Fantasy">Fantasy</option>
@@ -34,10 +34,10 @@
             <option value="Other">Other</option>
         </select>
     </label><br><br>
-    <label>Description
-        <textarea name="description" cols="30" rows="8"><%= book.description %></textarea>
+    <label class="form-label">Description
+        <textarea class="form-control" name="description" cols="30" rows="8"><%= book.description %></textarea>
     </label><br><br>
-    <button type="submit">Update Book Recommendation</button>
+    <button class="btn btn-outline-success" type="submit">Update Book Recommendation</button>
 </form>
 
 

@@ -19,10 +19,10 @@
                 <td><%= b.publishYear %></td>
                 <td><%= b.genre %></td>
                 <td><%= b.description %></td>
-                <td><a href="/books/<%= b._id %>">Details</a></td>
+                <td><a class="btn btn-outline-success" href="/books/<%= b._id %>">Details</a></td>
                 <td>
                     <form action="/books/<%= b._id %>?_method=DELETE" id="delete-form" method="POST">
-                        <button type="submit">Delete</button>
+                        <button type="button" class="btn btn-outline-danger">x</button>
                     </form>
                 </td>
             </tr>
