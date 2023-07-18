@@ -91,3 +91,7 @@ Come join the Book Club! Are you looking for the next book to pick up or are you
 
 <%- include('../partials/footer') %>
 ```
+## Icebox Items
+    * Background styling to fill in some whitespace
+    * Add a book caht or a comment section for users to interact
+    * Add a feature to seperate the books by genre
