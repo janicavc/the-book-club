@@ -12,7 +12,6 @@ Come join the Book Club! Are you looking for the next book to pick up or are you
 ## Preview
 ![books](https://i.imgur.com/eM7GMRv.png)
 ![login](https://i.imgur.com/GC3lywd.png)
-![add](https://i.imgur.com/qffbPuG.png)
 
 ## Getting Started
 [Launch the app](https://the-book-club-janica-2b263a1d2c2c.herokuapp.com/)
