@@ -1,5 +1,5 @@
 # The Book Club
-Come join the Book Club! A space to share your favorite books of all genres and to find new reads!
+Come join the Book Club! Are you looking for the next book to pick up or are you interested in reading more? Then the Book Club is for you it is a space to share your favorite books of all genres and to find new reads!
 ## Technologies Used
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
