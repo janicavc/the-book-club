@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 
 <h2>Book Recommendations</h2>
-<table>
+<table class="table">
     <thead>
         <tr>
             <th>Title</th>
@@ -22,7 +22,7 @@
                 <td><a class="btn btn-outline-success" href="/books/<%= b._id %>">Details</a></td>
                 <td>
                     <form action="/books/<%= b._id %>?_method=DELETE" id="delete-form" method="POST">
-                        <button type="button" class="btn btn-outline-danger">x</button>
+                        <button type="submit" class="btn btn-outline-danger">x</button>
                     </form>
                 </td>
             </tr>
