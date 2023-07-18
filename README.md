@@ -9,6 +9,9 @@ Come join the Book Club! Are you looking for the next book to pick up or are you
 ![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 
+## Preview
+![login](https://i.imgur.com/eM7GMRv.png)
+
 ## Getting Started
 [Launch the app](https://the-book-club-janica-2b263a1d2c2c.herokuapp.com/)
 
